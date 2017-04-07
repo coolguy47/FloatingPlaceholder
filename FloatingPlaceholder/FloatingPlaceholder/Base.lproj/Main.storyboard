@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FloatingPlaceholder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMn-x0-a7T" customClass="FloatingPlaceholderView" customModule="FloatingPlaceholder" customModuleProvider="target">
+                                <rect key="frame" x="70" y="85" width="235" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="R5Z-f2-Xih"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="stringPlaceholderName" value="Username"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kW0-gH-vlM" customClass="FloatingPlaceholderView" customModule="FloatingPlaceholder" customModuleProvider="target">
+                                <rect key="frame" x="70" y="147" width="235" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="F8C-BO-mFF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="stringPlaceholderName" value="Password"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KMn-x0-a7T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="54" id="6wO-bx-mtX"/>
+                            <constraint firstItem="kW0-gH-vlM" firstAttribute="top" secondItem="KMn-x0-a7T" secondAttribute="bottom" constant="14" id="bfm-3S-QXW"/>
+                            <constraint firstItem="kW0-gH-vlM" firstAttribute="leading" secondItem="KMn-x0-a7T" secondAttribute="leading" id="fpZ-cH-qrM"/>
+                            <constraint firstItem="kW0-gH-vlM" firstAttribute="trailing" secondItem="KMn-x0-a7T" secondAttribute="trailing" id="hOG-qh-tkV"/>
+                            <constraint firstItem="kW0-gH-vlM" firstAttribute="centerX" secondItem="KMn-x0-a7T" secondAttribute="centerX" id="qWR-bL-BuF"/>
+                            <constraint firstItem="KMn-x0-a7T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="65" id="rbE-Sy-VQC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KMn-x0-a7T" secondAttribute="trailing" constant="54" id="usB-V7-bxm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textfieldPassword" destination="kW0-gH-vlM" id="WSc-WH-lsK"/>
+                        <outlet property="textfieldUsername" destination="KMn-x0-a7T" id="1rM-5G-OhM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
